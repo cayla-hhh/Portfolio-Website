@@ -1,0 +1,173 @@
+/* Base Styles & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1, h2, h3 {
+  color: #111;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #0b5394;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #e5e7eb;
+  margin: 40px 0;
+}
+
+/* Intro Section */
+.intro-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.resume-btn {
+  background-color: #0b5394;
+  color: #fff;
+  border: 2px solid #0b5394;
+}
+
+.resume-btn:hover {
+  background-color: #0b5394;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Skills Section */
+.skills-section {
+  text-align: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.skill-chip {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-chip:hover {
+  transform: translateY(-2px);
+  border-color: #0b5394;
+  color: #0b5394;
+}
+
+/* Projects Section & Interactive Cards */
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+  /* Here is the interactive transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-content p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* Card Action Buttons */
+.card-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.card-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-outline {
+  border: 2px solid #333;
+  color: #333;
+}
+
+.btn-outline:hover {
+  background: #333;
+  color: #fff;
+}
+
+.btn-primary {
+  background: #111;
+  color: #fff;
+  border: 2px solid #111;
+}
+
+.btn-primary:hover {
+  background: #333;
+  border-color: #333;
+}
