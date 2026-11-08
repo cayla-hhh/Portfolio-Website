@@ -37,66 +37,130 @@
 
     <section class="projects-section">
       <h2>Featured Projects</h2>
-      <div class="cards-container">
-        
-        <div class="card">
-          <div class="card-content">
-            <h3>Job Application Tracker</h3>
-            <p>A streamlined web application designed to help job seekers organize, track, and manage their career opportunities and application statuses in one centralized dashboard.</p>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/cayla-hhh/Job-Application-Tracker" target="_blank" class="btn-outline">GitHub</a>
-            <a href="https://job-application-tracker-sigma-eosin.vercel.app/login" target="_blank" class="btn-primary">Live Demo</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h3>Sentiment Analysis Web App</h3>
-            <p>This app is a dual-engine sentiment analysis dashboard that allows users to compare real-time linguistic scores from TextBlob against deep-learning insights from HuggingFace Transformers for both individual entries and bulk-uploaded datasets.</p>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/cayla-hhh/Sentiment-Analysis-Web-App" target="_blank" class="btn-outline">GitHub</a>
-            <a href="https://sentiment-analysis-web-app-zp9wmqwje3a5ucylytbjze.streamlit.app/" target="_blank" class="btn-primary">Live Demo</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h3>Hypertension Risk Dashboard</h3>
-            <p>This web app is a Python-based ETL pipeline and Streamlit dashboard that transforms static heart disease data into an interactive, longitudinal tracking system for monitoring patient blood pressure trends and hypertensive crises.</p>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/cayla-hhh/End-to-End-Hypertension-Pipeline" target="_blank" class="btn-outline">GitHub</a>
-            <a href="https://end-to-end-hypertension-pipelinegit-fw5mfi9izwxmji8btad44k.streamlit.app/" target="_blank" class="btn-primary">Live Demo</a>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div class="card-content">
-            <h3>Parkinson's Detection Web App</h3>
-            <p>An interactive clinical dashboard that uses machine learning and vocal entropy analysis to provide high-accuracy, non-invasive screening for Parkinson’s disease.</p>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/cayla-hhh/Detecting-Parkinson-s-Disease" target="_blank" class="btn-outline">GitHub</a>
-            <a href="https://detecting-parkinson-s-disease-l2utmw8pe86lpadmxrneob.streamlit.app/" target="_blank" class="btn-primary">Live Demo</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-content">
-            <h3>Titanic Data Analysis</h3>
-            <p>Conducted a detailed exploratory analysis of the UCI Titanic dataset to identify key survival drivers, discovering that while young adults (20-40) comprised the largest group of survivors, the 'Child' demographic (0-12) maintained the highest overall survival probability.</p>
-          </div>
-          <div class="card-actions">
-            <a href="https://github.com/cayla-hhh/Titanic-Dataset-Analysis" target="_blank" class="btn-outline">GitHub</a>
-          </div>
-        </div>
-
+      
+      <!-- Tab Buttons -->
+      <div class="tabs-container">
+        <button class="tab-button active" onclick="openTab(event, 'cad-projects')">CAD Projects</button>
+        <button class="tab-button" onclick="openTab(event, 'cs-projects')">CS Projects</button>
       </div>
+
+      <!-- CAD Projects Tab (Default Active) -->
+      <div id="cad-projects" class="tab-content" style="display: block;">
+        <div class="cards-container">
+          
+          <!-- CAD Card 1 -->
+          <div class="card">
+            <!-- Replace 'cad-image-1.jpg' with your actual image file path -->
+            <img src="cad-image-1.jpg" alt="CAD Project 1" class="card-image">
+            <div class="card-content">
+              <h3>CAD Project 1</h3>
+              <p>Write a brief description of your 3D modeling or CAD design here. Explain the tools you used (e.g., SolidWorks, AutoCAD, Fusion 360), the design process, and the purpose of the model.</p>
+            </div>
+            <div class="card-actions">
+              <a href="LINK_TO_YOUR_PROJECT" target="_blank" class="btn-primary">View Project</a>
+            </div>
+          </div>
+
+          <!-- CAD Card 2 -->
+          <div class="card">
+            <img src="cad-image-2.jpg" alt="CAD Project 2" class="card-image">
+            <div class="card-content">
+              <h3>CAD Project 2</h3>
+              <p>Write a brief description of your 3D modeling or CAD design here. Explain the tools you used, the design process, and the purpose of the model.</p>
+            </div>
+            <div class="card-actions">
+              <a href="LINK_TO_YOUR_PROJECT" target="_blank" class="btn-primary">View Project</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CS Projects Tab (Hidden by default) -->
+      <div id="cs-projects" class="tab-content" style="display: none;">
+        <div class="cards-container">
+          
+          <div class="card">
+            <div class="card-content">
+              <h3>Job Application Tracker</h3>
+              <p>A streamlined web application designed to help job seekers organize, track, and manage their career opportunities and application statuses in one centralized dashboard.</p>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/cayla-hhh/Job-Application-Tracker" target="_blank" class="btn-outline">GitHub</a>
+              <a href="https://job-application-tracker-sigma-eosin.vercel.app/login" target="_blank" class="btn-primary">Live Demo</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Sentiment Analysis Web App</h3>
+              <p>This app is a dual-engine sentiment analysis dashboard that allows users to compare real-time linguistic scores from TextBlob against deep-learning insights from HuggingFace Transformers for both individual entries and bulk-uploaded datasets.</p>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/cayla-hhh/Sentiment-Analysis-Web-App" target="_blank" class="btn-outline">GitHub</a>
+              <a href="https://sentiment-analysis-web-app-zp9wmqwje3a5ucylytbjze.streamlit.app/" target="_blank" class="btn-primary">Live Demo</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Hypertension Risk Dashboard</h3>
+              <p>This web app is a Python-based ETL pipeline and Streamlit dashboard that transforms static heart disease data into an interactive, longitudinal tracking system for monitoring patient blood pressure trends and hypertensive crises.</p>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/cayla-hhh/End-to-End-Hypertension-Pipeline" target="_blank" class="btn-outline">GitHub</a>
+              <a href="https://end-to-end-hypertension-pipelinegit-fw5mfi9izwxmji8btad44k.streamlit.app/" target="_blank" class="btn-primary">Live Demo</a>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-content">
+              <h3>Parkinson's Detection Web App</h3>
+              <p>An interactive clinical dashboard that uses machine learning and vocal entropy analysis to provide high-accuracy, non-invasive screening for Parkinson’s disease.</p>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/cayla-hhh/Detecting-Parkinson-s-Disease" target="_blank" class="btn-outline">GitHub</a>
+              <a href="https://detecting-parkinson-s-disease-l2utmw8pe86lpadmxrneob.streamlit.app/" target="_blank" class="btn-primary">Live Demo</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <h3>Titanic Data Analysis</h3>
+              <p>Conducted a detailed exploratory analysis of the UCI Titanic dataset to identify key survival drivers, discovering that while young adults (20-40) comprised the largest group of survivors, the 'Child' demographic (0-12) maintained the highest overall survival probability.</p>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/cayla-hhh/Titanic-Dataset-Analysis" target="_blank" class="btn-outline">GitHub</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </section>
 
   </div>
+
+  <!-- JavaScript for Tab Switching -->
+  <script>
+    function openTab(evt, tabName) {
+      // Hide all tab content
+      let tabContents = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = "none";
+      }
+
+      // Remove the "active" class from all buttons
+      let tabButtons = document.getElementsByClassName("tab-button");
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the clicked button
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
 
 </body>
 </html>

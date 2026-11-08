@@ -24,7 +24,7 @@ h1, h2, h3 {
 }
 
 .highlight {
-  color: #0b5394;
+  color: #0b5394; 
 }
 
 .divider {
@@ -47,20 +47,23 @@ h1, h2, h3 {
 }
 
 /* Buttons */
-.btn {
+.btn, .btn-outline, .btn-primary {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 8px;
   transition: all 0.3s ease;
   cursor: pointer;
+  text-align: center;
 }
 
 .resume-btn {
   background-color: #0b5394;
   color: #fff;
   border: 2px solid #0b5394;
+  padding: 12px 24px;
 }
 
 .resume-btn:hover {
@@ -105,62 +108,56 @@ h1, h2, h3 {
   margin-bottom: 30px;
 }
 
+/* Forces exactly 2 cards per row */
 .cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; 
 }
 
+/* Make sure the card handles the image cleanly */
 .card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid #e5e7eb;
-  /* Here is the interactive transition */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  overflow: hidden; /* Ensures the image doesn't spill out of rounded card corners */
+  background: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+/* Styles the CAD image to look uniform and neat */
+.card-image {
+  width: 100%;
+  height: 250px; /* Forces all images to be the same height */
+  object-fit: cover; /* Prevents the image from stretching or squishing */
+  border-bottom: 1px solid #eaeaea;
 }
 
-.card-content p {
-  color: #555;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
+/* Pushes the buttons to the bottom of the card if descriptions are different lengths */
+.card-content {
+  flex-grow: 1; 
+  padding: 20px;
 }
 
-/* Card Action Buttons */
 .card-actions {
+  padding: 0 20px 20px 20px;
   display: flex;
-  gap: 12px;
+  gap: 12px; 
 }
 
-.card-actions a {
-  flex: 1;
-  text-align: center;
-  padding: 10px 0;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  transition: background 0.2s, color 0.2s;
-}
-
+/* Updated GitHub Button (Outline) - Now Blue */
 .btn-outline {
-  border: 2px solid #333;
-  color: #333;
+  border: 2px solid #0b5394;
+  color: #0b5394;
+  background: transparent;
 }
 
 .btn-outline:hover {
-  background: #333;
+  background: #0b5394;
   color: #fff;
 }
 
+/* Primary Button */
 .btn-primary {
   background: #111;
   color: #fff;
@@ -170,4 +167,53 @@ h1, h2, h3 {
 .btn-primary:hover {
   background: #333;
   border-color: #333;
+}
+
+/* Tab Navigation Styles */
+.tabs-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee; /* Creates a nice baseline under the tabs */
+}
+
+.tab-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  border-bottom: 3px solid transparent; /* Hidden border for inactive state */
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #333;
+}
+
+/* Active tab state */
+.tab-button.active {
+  color: #000; 
+  border-bottom: 3px solid #000; /* Underlines the active tab */
+}
+
+/* Tab Content */
+.tab-content {
+  animation: fadeIn 0.4s ease;
+}
+
+/* Smooth fade-in effect when switching tabs */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Makes it stack into 1 column on mobile phones */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
 }
